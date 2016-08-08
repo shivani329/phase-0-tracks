@@ -1,6 +1,7 @@
 # Git Definitions
 
-here is a change 
+here is a change again
+
 
 **Instructions: ** Define each of the following Git concepts.
 
