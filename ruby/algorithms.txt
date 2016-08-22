@@ -1,0 +1,30 @@
+(Elevator)
+
+-Move toward elevator call buttons
+	-Press top button to go up
+	-Press bottom button to go down
+-Wait for elevator
+-When doors open, step inside 
+	-Press the button that corresponds to desired floor
+-When doors open, step outside
+
+
+
+(Turn car on/Start driving)
+
+-Walk up to car
+-Insert key in door
+	-Turn key right to unlock
+	-Take key out of door
+-Open door
+-Get inside of car 
+-Insert key in ignition
+	-Turn key to the right and hold
+	-Release after three seconds
+-Press and hold the brake pedal
+	-Move stick shift to "D"
+	-Release brake pedal
+-Press gas pedal 
+	-Steer
+
+
