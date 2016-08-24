@@ -1,0 +1,68 @@
+def vampire_detector
+	puts "What is your name?"
+	name = gets.chomp
+
+	puts "How old are you?"
+	age = gets.chomp.to_i
+
+	puts "What year were you born?"
+	birth_year = gets.chomp.to_i
+
+	current_year = 2016
+
+
+		valid_input = false
+		until valid_input
+			puts "Want some garlic bread? Please answer Yes or No"
+			garlic_bread = gets.chomp
+			if garlic_bread == "Yes" || garlic_bread == "No"
+				valid_input = true
+			else puts "Please answer Yes or No"
+			end 
+
+		end
+
+		valid_input = false
+		until valid_input
+			puts "Would you like to enroll in the company's health insurance? Please answer Yes or No"
+			insurance = gets.chomp
+			if insurance == "Yes" || insurance == "No"
+				valid_input = true
+			else puts "Please answer Yes or No"
+			end 
+
+end
+
+
+true_age = current_year - birth_year
+
+if age == true_age
+	age = true
+elsif age /= true_age
+	age = false
+elsif garlic_bread == "Yes"
+	garlic_bread = true
+elsif garlic_bread == "No"
+	garlic_bread = false
+elsif insurance == "Yes"
+	insurance = true
+elsif insurance == "No"
+	insurance = false
+end
+ 
+if age && (garlic_bread || insurance)
+	puts "Probably not a vampire"
+	
+else
+	puts "Results inconclusive"
+end 
+
+
+
+
+		
+
+
+end 
+
+vampire_detector
