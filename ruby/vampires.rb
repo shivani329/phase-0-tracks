@@ -60,7 +60,7 @@ end
 	p "Insurance: #{insurance} to insurance."
 	
 
-	starting_number = starting_number += 1
+	starting_number = starting_number += 1 
 	end
 end 
 
