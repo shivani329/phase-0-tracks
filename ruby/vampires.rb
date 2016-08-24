@@ -39,31 +39,6 @@ until starting_number == new_employees
 end
 
 
-#true_age = current_year - birth_year
-
-#if age == true_age
-	#age = true
-#elsif age /= true_age
-#	age = false
-#elsif garlic_bread == "Yes"
-#	garlic_bread = true
-#elsif garlic_bread == "No"
-#	garlic_bread = false
-#elsif insurance == "Yes"
-#	insurance = true
-#elsif insurance == "No"
-#	insurance = false
-#end
- 
-#if age && (garlic_bread || insurance)
-	#puts "Probably not a vampire"
-	
-#else
-	#puts "Results inconclusive"
-#end 
-
-#end 
-
 
 	if (name == "Drake Cula") || (name == "Tu Fang")
 			puts "Definitely a Vampire"
@@ -76,6 +51,8 @@ end
 		else 
 			puts "Results Inconclusive"
 		end 
+
+	
 	p "Name: #{name}"
 	p "Age: #{age} years old"
 	p "Year born: #{birth_year}"
