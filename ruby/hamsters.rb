@@ -15,9 +15,8 @@ until volume > 0
 			puts "I'm sorry, please enter a number from 1 to 10"
 		elsif volume > 10
 			puts "I'm sorry, please enter a number from 1 to 10"
-		elsif volume < 0
-			puts "I'm sorry, please enter a number from 1 to 10"
-		end
+		volume = -1
+			end
 end
 
 puts "What is the color of the hamster's fur?"
@@ -63,17 +62,18 @@ until valid_answer == true
 end
 
 if can_adopt == "y"
-	adoptstatement = "This hamster is a good candidate for adoption."
+	adoptstatement = "is a good candidate for adoption."
 elsif can_adopt == "n"
-	adoptstatement = "This hamster is not a good candidate for adoption."
+	adoptstatement = "is not a good candidate for adoption."
 end
 
 
 
-puts "So, if I've got things right the hamster's name is #{name}, has a volume level of #{volume}, and is #{color} in color. #{agestatement} #{adoptstatement}"
-
-
-
+puts "So, if I've got things right:"
+puts "The hamster's name is #{name}."
+puts "On a scale from 1 to 10, it has a volume level of #{volume}."
+puts "It has #{color} fur."
+puts "#{agestatement}, and #{adoptstatement}."
 
 
 
