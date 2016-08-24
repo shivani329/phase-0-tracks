@@ -1,4 +1,9 @@
 def vampire_detector
+	puts "How many employees are being processed today?"
+	new_employees = gets.chomp.to_i
+	starting_number = 0
+
+until starting_number == new_employees
 	puts "What is your name?"
 	name = gets.chomp
 
@@ -34,35 +39,53 @@ def vampire_detector
 end
 
 
-true_age = current_year - birth_year
+#true_age = current_year - birth_year
 
-if age == true_age
-	age = true
-elsif age /= true_age
-	age = false
-elsif garlic_bread == "Yes"
-	garlic_bread = true
-elsif garlic_bread == "No"
-	garlic_bread = false
-elsif insurance == "Yes"
-	insurance = true
-elsif insurance == "No"
-	insurance = false
-end
+#if age == true_age
+	#age = true
+#elsif age /= true_age
+#	age = false
+#elsif garlic_bread == "Yes"
+#	garlic_bread = true
+#elsif garlic_bread == "No"
+#	garlic_bread = false
+#elsif insurance == "Yes"
+#	insurance = true
+#elsif insurance == "No"
+#	insurance = false
+#end
  
-if age && (garlic_bread || insurance)
-	puts "Probably not a vampire"
+#if age && (garlic_bread || insurance)
+	#puts "Probably not a vampire"
 	
-else
-	puts "Results inconclusive"
+#else
+	#puts "Results inconclusive"
+#end 
+
+#end 
+
+
+	if (name == "Drake Cula") || (name == "Tu Fang")
+			puts "Definitely a Vampire"
+		elsif (2016 - birth_year != age) && (garlic_bread == "No") && (insurance == "No")
+			puts "Almost certainly a Vampire"
+		elsif (2016 - birth_year != age) && (garlic_bread == "No" || insurance == "No")
+			puts "Probably a Vampire"
+		elsif (2016 - birth_year = age) && (garlic_bread == "Yes" || insurance == "Yes")
+			puts "Probably not a vampire"
+		else 
+			puts "Results Inconclusive"
+		end 
+	p "Name: #{name}"
+	p "Age: #{age} years old"
+	p "Year born: #{birth_year}"
+	p "Garlic bread?: #{garlic_bread} to garlic bread"
+	p "Insurance: #{insurance} to insurance."
+	
+
+	starting_number = starting_number += 1
+	end
 end 
 
-
-
-
-		
-
-
-end 
 
 vampire_detector
