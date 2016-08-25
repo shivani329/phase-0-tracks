@@ -37,17 +37,29 @@ until starting_number == new_employees
 			end 
 
 end
+		valid_input = false
+		until valid_input
+			puts "Do you have any allergies? Please list them one at a time. Type done when complete."
+			allergy = gets.chomp
+			if allergy == "done" || allergy == "sunshine"
+				valid_input = true
+			
+				
+
+			else puts "Please enter another"
+			end 
+		end
 
 
-
-	if (name == "Drake Cula") || (name == "Tu Fang")
+	if (name == "Drake Cula") || (name == "Tu Fang") || (allergy =="sunshine")
 			puts "Definitely a Vampire"
 		elsif (2016 - birth_year != age) && (garlic_bread == "No") && (insurance == "No")
 			puts "Almost certainly a Vampire"
 		elsif (2016 - birth_year != age) && (garlic_bread == "No" || insurance == "No")
 			puts "Probably a Vampire"
-		elsif (2016 - birth_year = age) && (garlic_bread == "Yes" || insurance == "Yes")
+		elsif (2016 - birth_year == age) && (garlic_bread == "Yes" || insurance == "Yes")
 			puts "Probably not a vampire"
+	
 		else 
 			puts "Results Inconclusive"
 		end 
@@ -66,3 +78,6 @@ end
 
 
 vampire_detector
+
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
