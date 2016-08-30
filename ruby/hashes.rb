@@ -1,4 +1,14 @@
 
+# Ask user for information (name age number of kids theme and choose your own)
+# Save as temp variables, convert to integers if needed
+# create hash with symbols for keys, print the hash
+# ask user if they want to change any of their inputs if not say none
+# update key with new value
+# print 
+
+
+
+
 
 
 puts "Client's Name:"
