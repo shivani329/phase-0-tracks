@@ -11,7 +11,18 @@ end
 favorite_color {|color_1, color_2| puts "But I also kind of like #{color_1} and #{color_2} as well!"}
 
 #Release 1
-ocean_animals = ["whales", "dolphins", "sharks", "jellyfish"]
+ocean_animals = ["Whales", "Dolphins", "Sharks", "Jellyfish"]
+p ocean_animals
+
+ocean_animals.each do |x| 
+  puts "#{x} are ocean dwelling creatures!"
+end 
+
+
+ocean_animals.map! do |x|
+	puts "#{x.upcase} ARE COOL!"
+	
+end
 
  birthdays = {
   Mary: "january",
@@ -20,20 +31,15 @@ ocean_animals = ["whales", "dolphins", "sharks", "jellyfish"]
   Mike: "march"
 }
 
-p
-ocean_animals.each do |x| 
-  puts "#{x} are ocean dwelling creatures!"
-end
+
 
 p birthdays
 birthdays.each do |name, month|
 	puts "#{name}'s birthday is in #{month.capitalize}."
 end
 
-p ocean_animals
-ocean_animals.map! do |x|
-	puts x.upcase
-	
+birthdays.map do |name, month|
+	puts "In #{month.capitalize} remember to say Happy Birthday to #{name}!"
 end
 
 #Release 2
@@ -84,16 +90,22 @@ p numbers
 
 #question3
 
-random_words = ["pig", "crate", "apple", "egg", "wheel", "motorcycle"]
-
 
 random_words = {
-	pig: 3,
-	crates: 6,
-	apple: 5,
-	egg: 3,
-	wheels: 6,
-	motorcycle: 10
+	pig: "pig".length,
+	crates: "crates".length,
+	apple: "apple".length,
+	egg: "egg".length,
+	wheels: "wheels".length,
+	motorcycle: "motorcycle".length,
 }
 
-random_words.select {|word, num| num.odd?}
+p random_words
+
+puts "Which of these words has an even number of letters in it? How many letters?"
+even_words = random_words.select {|word, num| num.even? }
+
+
+
+p even_words
+
