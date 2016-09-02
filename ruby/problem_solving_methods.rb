@@ -1,53 +1,51 @@
-#define method - input integer and array 
-#iterate through each index of array
-# using while loop until index 
-# compare value of integer to array at current index 
-# if equal to one another return output of index
-
+# Define method - input integer and array
+# iterate through each index of array
 
 def search(integer,array)
 	index = 0
-
-	# array.length.times do
-	# finished = nil
-	# output = nil
-
-	# break if (output != nil) || (finished == true)
-
+	# using while loop while index < array.length
+	# compare value of integer to array at current index
 	while index < array.length
 		output = nil
-		# break if output != nil
-		array.each do |number|
-			if array[index] == integer
-				output = index
-			else
-				output = nil
-				output
-				# if index == array.length
-					# finished = true
-				# end
-			end
-			# break if number == integer
-
-			# if number != integer
-			# 	output = nil
-			# elsif number == integer
-			# 	output = index
-			# end
+		# if equal to one another, return output of index and break
+		if array[index] == integer
+			output = index
+			break
+		# Else return output of nil and advance index
+		else
+			output = nil
+			index +=1
 		end
-	if output != nil
-		break
-	end
-	index += 1
 	end
 	output
 end
 
-int = 100
+
+int = 765
 arr = [1,2,3,4,5,10,100,765]
-puts search(int,arr)
+puts search(int,arr))
 
+#Release 1
 
+		def fib(n)
+	index = 0
+	array = []
+	until index == n
+    if index == 0
+        array << 0
+        index += 1
+    elsif index == 1
+        array << 1
+        index += 1
+    else
+        array << (array[index-2] + array[index-1])
+        index += 1
+    end
+	end
+	array
+end
+
+fib(100).last
 
 
 
