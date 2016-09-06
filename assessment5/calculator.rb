@@ -30,6 +30,7 @@ def user_calculator
 	calcs_done = 0
 	user_array = []
 
+# loop ends when user enters "done" ...continues to perform simple operations until then
 	puts "Give me an equation please!"
 	user_equation = gets.chomp
 	while user_equation != "done" 
@@ -42,12 +43,12 @@ def user_calculator
 #split indexes to print each by recording each as user input
 		input_array = user_equation.split(' ')
 		calc_answer = calculator(input_array[0], input_array[1], input_array[2])
-		puts "#{calc_answer} this is your answer"
+		puts "The answer is #{calc_answer} "
 		user_array << "#{user_equation} = #{calc_answer}"
 		calcs_done += 1
 		user_equation = gets.chomp
 	end 
-	puts "There are the calculations you have done: #{calcs_done}"
+	puts "These are the calculations you have done: #{calcs_done}"
 	puts user_array
 
 	
