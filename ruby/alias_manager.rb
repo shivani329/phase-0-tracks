@@ -8,8 +8,7 @@
 
 
 
-def name_changer
-	
+def name_changer 
 
 	code_name = {}
 	puts "What is your first and last name?"
