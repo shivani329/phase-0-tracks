@@ -1,7 +1,7 @@
 class Santa
 
-	attr_reader :name,:ethnicity,:home,:gender,:age
-	attr_accessor :gender,:ethnicity,:name,:home
+	attr_reader :name,:ethnicity,:location,:gender,:age
+	attr_accessor :gender,:ethnicity,:name,:location
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -27,6 +27,22 @@ class Santa
 	end
 
 
+#getter methods (shorthand is attr_reader)
+#these can be commented out because I used the short hand of attr_reader 
+
+	# def age
+	# 	puts @age
+	# end
+
+	# def ethnicity 
+	# 	puts @ethnicity
+	# end
+
+	# def name
+	# 	puts @name
+	# end
+
+	#setter methods (shorthand is attr_accessor)
 
 	def celebrate_birthday=(current_age)
 		@age = current_age+1
@@ -41,25 +57,40 @@ class Santa
 
 	def gender_change=(new_gender)
 		@gender=new_gender
-		puts new_gender
-
 	end
 end
 
 
+#test driver code 
 	test = Santa.new("jack", "America", "transgender", "Indian", "5")
 	test.eat_milk_and_cookies("choco chip cookie")
 
 
-	test.celebrate_birthday
+	test.celebrate_birthday = 5
 
-	test.get_mad_at = "Rudolph"
+	test.get_mad_at = "Dancer"
+	#gender can be changed from outside of the class
 	test.gender= "agender"
-	puts "now you identify as #{test.gender}"
+	puts "now you identify as #{test.gender}" 
 
 
-	# def santa_generator()
-	# example_name=["mike","peter","cracker-jack","ozwald","johnny","lisle","genie"].shuffle
-	# example_genders = ["transgender", "male", "bigender", "female", "gender fulid", "unsure", "N/A"].shuffle
+	def santa_generator
+	example_name=["mike","peter","cracker-jack","ozwald","johnny","lisle","genie"].shuffle
+	example_locations=["Seattle","Illinois","North Pole","Galactica","Zootopia","Pandora","Antarctica"].shuffle
+	example_genders = ["transgender", "male", "bigender", "female", "gender fulid", "unsure", "N/A"].shuffle
+	example_ethnicities = ["Indian", "Black", "Portugese", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"].shuffle
+	example_ages=[140,120,58,29,132,97,71].shuffle
 	
+	x=0
+	while x<100
+ 	santas=[]
+ 	i=rand(7)
+ 	new_santa=Santa.new(example_name[i],example_locations[i],example_genders[i],example_ethnicities[i],example_ages[i])
+ 	santas[x]=new_santa
+	
+	x+=1	
+	end
+end
+
+santa_generator
 
