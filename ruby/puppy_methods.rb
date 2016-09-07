@@ -1,3 +1,6 @@
+#Worked with Travis Buckley on this pairing assignment
+
+
 class Puppy
 
   def fetch(toy)
@@ -17,7 +20,8 @@ class Puppy
   end
 
   def dog_years(years)
-  	p years / 7 
+  	dog_age = years / 7 
+    puts "You are #{dog_age} years old"
   end
 
   def walk(distance)
@@ -40,7 +44,7 @@ Remmy.fetch("ball")
 Remmy.speak(4) 
 Remmy.roll_over
 Remmy.dog_years(35)
-Remmy.walk("three")
+Remmy.walk(3)
 
 
 
