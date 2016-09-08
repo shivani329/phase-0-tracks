@@ -33,3 +33,9 @@ class CavsFan
 	include Shout
 end
 
+#Driver code
+
+puts BullsFan.new.yell_happily("LETS GO BULLS")
+puts CavsFan.new.yell_angrily("BULLS SUCK")
+puts BullsFan.new.yell_angrily("CAVS SUCK")
+puts CavsFan.new.yell_happily("LETS GO CAVS")
