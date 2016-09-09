@@ -52,3 +52,19 @@ end
 alias add updatedList
 
 
+def listOutput(list)
+	list.each{|item, quantity| p "You need to get #{quantity} #{item}(s)"}
+end
+
+list = mainList("apples eggs carrots")
+list = add("lemonade", list, 2)
+list = add("tomatoes", list, 3)
+list = add("onions", list, 1)
+list = add("ice Cream", list, 4)
+list = remove("lemonade", list)
+list = updatedList("ice Cream", list, 1)
+listOutput(list) 
+
+
+
+
