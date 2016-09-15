@@ -19,22 +19,24 @@ for (var i=0; i<names.length; i++)
 
 console.log(stable);
 
-function Car (make, model, year, color, isUsed) {
+function Car (make, model, year, color, isUsed, features) {
 	this.make=make;
 	this.model=model;
 	this.year=year;
 	this.color=color;
 	this.isUsed=isUsed;
+	this.features=features;
 	this.describe= function() 
 	{ 
 		console.log("I am a " + this.isUsed + " " + this.color + " " + this.year + " " + this.make + " " + this.model) 
+		console.log("My features are: " + this.features.toString());
 		console.log("Drive safe!")};
 	};
 
-var Ruby = new Car ("Lexus", "RX350", "2009", "red", "previously owned");
+var Ruby = new Car ("Lexus", "RX350", "2009", "red", "previously owned", ["navigation system, broken charger ports, stained carpets and cracked leather interior!"]);
 Ruby.describe()
 
-var Barney = new Car ("Chrysler", "PT Cruiser", "2001", "purple", "previously owned");
+var Barney = new Car ("Chrysler", "PT Cruiser", "2001", "purple", "previously owned", ["failing engine, dead battery, missing windshield wipers, and unsturdy floorboards...but the radio still works!"]);
 Barney.describe()
 
 
