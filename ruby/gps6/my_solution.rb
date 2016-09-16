@@ -88,3 +88,52 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+#the state_data is a constant that is set for the hash, it can be used globally within the files
+
+#Require relative allows files that are in the same folder to be passed through 
+#Require would need a file path to be able to use the variables
+
+#there are many ways to iterate through hashes but i mostly use .each which goes through each key and value pair
+
+
+# I was surprised that I noticed that the parameters didnt need to be used for the instance variables but 
+#it caught my eye...so I guess that means I am learning something!! They can be used anywhere in the class 
+#so it doesnt need to be restated
+
+#I feel like iterating through really big hashes was made really simple so hashes and using them for their 
+#full potential on a larger scale was really solidified through this challenge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
