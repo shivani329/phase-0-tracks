@@ -17,6 +17,41 @@ function longestPhrase(phrases) {
 	return longest;
 }
 
+// Release 1
+
+// write a function that takes two objects and checks to see if the objects share at least one key-value pair
+// group functions at top and test on bottom
+// if one thing is the same value, return true
+// if neither match, return false
+
+function keyValue(key1, key2) {
+
+		for (var x in key1) {
+			for (var y in key2) {
+				if (y === x) {
+					if (key1[x] === key2[x]) {
+						console.log(x + ' is a common factor');
+					}
+				}
+			}
+		}
+}
+
+
+//driver code for release 1
+
+var key1 = {
+	color: 'grey',
+	breed: 'cat'
+
+};
+
+var key2 = {
+	color: 'black',
+	breed: 'cat'
+};
+
+keyValue(key1, key2)
 
 
 
