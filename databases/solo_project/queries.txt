@@ -25,5 +25,23 @@
 			surgeonfish|salt water
 			clownfish|salt water
 			goldfish|fresh water
-			
+
 5) 	sqlite> DELETE FROM fish WHERE type="goldfish";
+
+
+RELEASE 3: EXPLORE JOINS
+
+LEFT JOIN: 
+	sqlite> SELECT fish.type, habitat.water FROM fish LEFT JOIN habitat ON fish.habitat_id=habitat.id;
+			salmon|both
+			catfish|fresh water
+			surgeonfish|salt water
+			clownfish|salt water
+
+
+INNER JOIN: 
+	sqlite> SELECT fish.color, habitat.water FROM fish INNER JOIN habitat ON fish.habitat_id=habitat.id;
+			pink|both
+			brown|fresh water
+			blue/yellow|salt water
+			orange/white/black|salt water
