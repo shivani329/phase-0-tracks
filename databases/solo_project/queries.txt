@@ -1,0 +1,29 @@
+1) 	sqlite> SELECT * FROM fish;
+			1|salmon|11|pink|false|2
+			2|catfish|100|brown|false|1
+			3|surgeonfish|12|blue/yellow|true|2
+			4|clownfish|4|orange/white/black|true|2
+			5|goldfish|6|orange|true|1
+
+1a) sqlite> SELECT * FROM habitat;
+			1|fresh water
+			2|salt water
+			3|both
+
+2)	sqlite> UPDATE fish SET habitat_id=3 WHERE type="salmon";
+
+3) 	sqlite> SELECT * FROM fish, habitat WHERE fish.habitat_id = habitat.id;
+			1|salmon|11|pink|false|3|3|both
+			2|catfish|100|brown|false|1|1|fresh water
+			3|surgeonfish|12|blue/yellow|true|2|2|salt water
+			4|clownfish|4|orange/white/black|true|2|2|salt water
+			5|goldfish|6|orange|true|1|1|fresh water
+
+4) 	sqlite> SELECT fish.type, habitat.water FROM fish JOIN habitat ON fish.habitat_id = habitat.id;
+			salmon|both
+			catfish|fresh water
+			surgeonfish|salt water
+			clownfish|salt water
+			goldfish|fresh water
+			
+5) 	sqlite> DELETE FROM fish WHERE type="goldfish";
