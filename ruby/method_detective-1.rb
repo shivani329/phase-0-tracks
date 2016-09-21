@@ -10,7 +10,7 @@
 p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-p "zom".(1, "o")
+p "zom".insert(1, "o")
 # => “zoom”
 
 p "enhance".center(15)
@@ -41,3 +41,7 @@ p "z".ord
 
 p "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
+
+
+# as I re-did this release I tried a few different ways than I did the first time
+# both work the same, and I understand more options now.
