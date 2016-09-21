@@ -32,9 +32,9 @@ def designer
 	puts "Currently Employed? Yes or No:"
 		# .downcase will allow the program to work regardless of if the user says Yes or yes/No or no
 		user_employed = gets.chomp.downcase 
-		if user_employed = "yes"
+		if user_employed == "yes"
 			user_employed = true
-		elsif user_employed = "no"
+		elsif user_employed == "no"
 			user_employed = false
 		end
 
@@ -43,37 +43,36 @@ def designer
 
 	user_data = {
 
-		name: user_name ,
-		age: user_age ,
-		children: user_children ,
-		theme: user_theme ,
-		hours: user_hours ,
-		employed: user_employed ,
-		color: user_color 
+		:name => user_name ,
+		:age => user_age ,
+		:children => user_children ,
+		:theme => user_theme ,
+		:hours => user_hours ,
+		:employed => user_employed ,
+		:color => user_color 
 	}
 
 	p user_data
 
-	puts "Would you like to make any changes? If so, please respond with name, age, children, theme, 
-			hours, employed, or color. If no, please respond with 'done'"
-
-	user_update = gets.chomp
+	p "Do you need to change an answer? Please input the value name (name, age, children, theme, hours, employed, color) that you want to edit, or type none"
+		user_input = gets.chomp
+		if user_input == "no changes"
+		else
+			p "input new #{user_input}"
+			new_input = gets.chomp
+			#this pushes the new input into the user data hash and makes it update to the symbol
+			user_data[user_input.to_sym] = new_input
+		end
 
 	
-	if user_update == :done #this is what I should use to add :done to the hash as a symbol
-		puts "No changes made"
-	elsif user_update == ":name" || ":age" || ":children" || ":theme" || ":hours" || "employed" || "color"
- 			puts "Please enter the new information"
- 			new_data = gets.chomp
- 			#this pushes the user update of whatever they inputted(new_data) into the user_data hash
- 			user_data[user_update] = "#{new_data}"
- 	end
+ 
+
 
  	p user_data
 
  end
 
- design
+ designer
 
 
 
