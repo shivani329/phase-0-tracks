@@ -41,4 +41,45 @@ def designer
 	puts "Favorite Color:"
 			user_color = gets.chomp
 
+	user_data = {
+
+		name: user_name ,
+		age: user_age ,
+		children: user_children ,
+		theme: user_theme ,
+		hours: user_hours ,
+		employed: user_employed ,
+		color: user_color 
+	}
+
+	p user_data
+
+	puts "Would you like to make any changes? If so, please respond with name, age, children, theme, 
+			hours, employed, or color. If no, please respond with 'done'"
+
+	user_update = gets.chomp
+
 	
+	if user_update == :done #this is what I should use to add :done to the hash as a symbol
+		puts "No changes made"
+	elsif user_update == ":name" || ":age" || ":children" || ":theme" || ":hours" || "employed" || "color"
+ 			puts "Please enter the new information"
+ 			new_data = gets.chomp
+ 			#this pushes the user update of whatever they inputted(new_data) into the user_data hash
+ 			user_data[user_update] = "#{new_data}"
+ 	end
+
+ 	p user_data
+
+ end
+
+ design
+
+
+
+
+
+
+
+
+
