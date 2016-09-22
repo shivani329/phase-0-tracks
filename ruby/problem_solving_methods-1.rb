@@ -30,6 +30,15 @@ arr = [1,2,3,4,5,10,100,765]
 puts search(int,arr)
 
 
-# int = 100 
-# arr = [1,2,3,4,5,10,100,765]
-# puts search(3, arr)
+def fibonacci(n)
+	#index starts at 0, iterate through until the value of n is reached 
+	index = 2
+	array = [0,1]
+	until index == n
+		array << (array[-2] + array[-1])
+		index += 1
+	end
+
+	array
+end
+puts fibonacci(100).last
