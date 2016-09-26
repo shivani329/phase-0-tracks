@@ -8,6 +8,10 @@ class Santa
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
+		puts "You identify as #{@gender}"
+		puts "You are #{@ethnicity}"
+		
+		
 
 
 	end
@@ -36,18 +40,33 @@ end
 santas = []
 example_genders = ["agender", "female", "transgender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "French", "white", "Indian", "prefer not to say", "unicorn", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+
+
+	# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
 
 #driver code 
-santa1 = Santa.new("transgender", "French")
-santa1.speak
-p santa1.gender
-santa1.eat_milk_and_cookies("chocolate chip")
-santa1.get_mad_at("Vixen")
-p santa1.age
-p santa1.celebrate_birthday
-p santa1.celebrate_birthday
-santa1.gender = "female"
-p santa1.gender
+# santa1 = Santa.new("transgender", "French")
+# santa1.speak
+# p santa1.gender
+# santa1.eat_milk_and_cookies("chocolate chip")
+# santa1.get_mad_at("Vixen")
+# p santa1.age
+# p santa1.celebrate_birthday
+# p santa1.celebrate_birthday
+# santa1.gender = "female"
+# p santa1.gender
+
+
+100.times do
+	i=rand(example_genders.length)
+	age = rand(140)
+	santa = Santa.new(example_genders[i], example_ethnicities[i])
+	age.times do 
+		santa.celebrate_birthday
+	end
+	puts "You are #{santa.age} years old"
+end
+
+
