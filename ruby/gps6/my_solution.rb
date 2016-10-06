@@ -103,37 +103,6 @@ alaska.virus_effects
 #I feel like iterating through really big hashes was made really simple so hashes and using them for their 
 #full potential on a larger scale was really solidified through this challenge
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#as i went through and did this gps for the second time I understood the reasoning behind alot of things more, but i still
+#found myself wanting to choose the same ways to handle the challenge. I re did the entire thing but ended up with virutally
+#the same thing, so i went back to compare against the current one. I did not use good gitflow, and I've been told I need to work on my commit messages
