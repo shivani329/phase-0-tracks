@@ -14,3 +14,24 @@ create_table_cmd = <<-SQL
 	)
 SQL
 
+
+table_cmd = <<-SQL
+	INSERT INTO todolist (to_do, notes, quit) VALUES (?,?, 0)
+SQL
+
+delete_cmd = <<-SQL
+	DELETE FROM todolist WHERE id = ?
+SQL
+
+delete_finished_cmd = <<-SQL
+	DELETE FROM todolist WHERE quit = 1
+SQL
+
+update_cmd = <<-SQL
+	UPDATE todolist SET quit = 1 WHERE id = ?
+SQL
+
+drop_cmd = <<-SQL
+	DROP TABLE todolist
+SQL
+
