@@ -1,23 +1,20 @@
 List of common HTTP status codes:
 
-	1. 		200 OK
-	2. 		300 Multiple Choices
-	3. 		301 Moved Permanently
-	4. 		302 Found
-	5. 		304 Not Modified
-	6. 		307 Temporary Redirect
-	7. 		400 Bad Request
-	8. 		401 Unauthorized
-	9. 		403 Forbidden
-	10. 	404 Not Found
-	11. 	410 Gone
-	12. 	500 Internal Server Error
-	13. 	501 Not Implemented
-	14. 	503 Service Unavailable
-	15. 	550 Permission denied
+	1. 200 = okay
+		 everything loaded ok
+	2. 300 = multiple choices
+		There were different choices to load, and one was selected. IE different index.html pages, one for each specific language. Only loaded the one for your langauge
+		New url was assigned to the typed in url.
+	3. 304 = not modified
+		GET requested is allowed, but docoument is not modified.
+	4. 403 = forbidden
+		Server understood, but cannot fill request.
+	5. 404 = not found
+		Server didn't find a matching url to request info from.
 
 
-	What is the difference between a GET request and a POST request? When might each be used?
+
+What is the difference between a GET request and a POST request? When might each be used?
 
 		GET requests: requests data from a specified resource 
 		POST requests: submits data to be processed to a specified resource 
@@ -26,6 +23,8 @@ List of common HTTP status codes:
 		You should use POST when dealing with sensitive data, and when dealing with long requests. 
 
 
-	What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
+What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
 
 		A cookie is a small piece of data sent from a website and stored in the users web browser while the user is still browsing. They are used to be reliable mechanism for websites to remember stateful logging in or recording which pages were visited in the past. They can also be used to remember arbitrary pieces of information that the user previously entered into form fields such as names, addresses, passwords, and credit card numbers. 
+
+
