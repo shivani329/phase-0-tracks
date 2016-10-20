@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this is the title!</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+		$("h1").click(function(){
+			$(this).hide();	
+		});
+	});
+	$(document).ready(function() {
+		$("h3").hover(function(){
+				$(this).hide();
+		},
+		function(){
+			$(this).show();
+		});
+	});
+	$(document).ready(function(){
+		$("#story").mouseenter(function(){
+			$(this).css("color", "red");
+		});
+		$("#story").mouseout(function(){
+			$(this).css("color", "black");
+		});
+	});
+	$(document).ready(function(){
+			$("img").mouseenter(function(){
+				$(this).hide();
+			});
+			$("img").mouseout(function(){
+				$(this).show();
+			});
+		});
+	
+	$(document).ready(function(){
+	    $(".btn1").click(function(){
+	        $("a").slideUp();
+	    });
+	    $(".btn2").click(function(){
+	        $("a").slideDown();
+	    });
+	});
+</script>
+
+
+</head>
+<body>
+	<h1>This is a header</h1>
+	<main>	
+		<h3>This is header for main section</h3>
+		<div id="story">
+			<p>Yo
+His palms are sweaty, knees weak, arms are heavy
+There's vomit on his sweater already, mom's spaghetti
+He's nervous, but on the surface he looks calm and ready
+To drop bombs, but he keeps on forgettin'
+What he wrote down, the whole crowd goes so loud
+He opens his mouth, but the words won't come out
+He's chokin', how, everybody's jokin' now
+The clocks run out, times up, over, blaow!
+Snap back to reality, oh there goes gravity</p>
+
+		</div>
+		<div id="source">
+			<nav>
+				<a href="http://www.google.com">Google</a>
+				<a href="http://www.facebook.com">facebook</a>
+				<button class="btn1">Slide up</button>
+				<button class="btn2">Slide down</button>
+			</nav>
+		</div>
+
+	
+		
+
+
+
+	</main>
+
+</body>
+</html>
